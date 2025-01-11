@@ -1,0 +1,4 @@
+docker run -p 3307:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -d mysql:latest 
+
+
+docker run -p 9090:8080 --name spring-mysql-docker --network spring-network -e MYSQL_HOST=mysql-container -e MYSQL_USER:=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 spring-mysql-docker
